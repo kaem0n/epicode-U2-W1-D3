@@ -1,0 +1,277 @@
+/* GENERAL SETTINGS */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6d3318;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+p, button {
+    font-size: 0.9em;
+}
+
+li, h1, h2, h3 {
+    text-transform: capitalize;
+}
+
+li, h3, button {
+    font-weight: 700;
+}
+
+h1, h2, h4 {
+    font-weight: 900;
+}
+
+header, article, .card {
+    background-color: #fef7e2;
+}
+
+nav li, button {
+    background-color: #ffdd80;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 576px) { /* GENERAL TABLET */
+    body {
+        padding: 0;
+    }
+
+    main {
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width: 769px) { /* GENERAL DESKTOP */
+
+    body {
+        display: flex;
+    }
+}
+
+/* HEADER */
+
+header {
+    border-radius: 80px;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+}
+nav {
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    text-align: center;
+    border-radius: 50px;
+    padding: 20px 0;
+    margin: 5px;
+    width: 46%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#shop {
+    text-transform: uppercase;
+    border-radius: 50px;
+    width: 92%;
+    font-size: 1.5em;
+}
+
+#shop img {
+    height: 1.5em;
+    margin-right: 0.7em;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) { /* HEADER TABLET */
+    header {
+        border-radius: 0;
+        padding: 1em 0.5em;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+        font-size: 0.7em;
+    }
+
+    #shop, nav li {
+        width: fit-content;
+        flex-grow: 1;
+        padding: 1em;
+    }
+
+    nav li:nth-of-type(1), nav li:nth-of-type(2) {
+        order: 1;
+    }
+    
+    #shop {
+        order: 2;
+    }
+    
+    nav li:nth-of-type(4), nav li:nth-of-type(5) {
+        order: 3;
+    }
+
+}
+
+@media screen and (min-width: 769px) { /* HEADER DESKTOP */
+    header {
+        width: unset;
+        border-radius: unset;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #shop, nav li {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    nav li {
+        padding: 2em;
+    }
+
+    #shop {
+        padding: 1em;
+    }
+}
+
+/* MAIN - CARD SECTION */
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 1em;
+}
+
+.card {
+    border-radius: 50px;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.card > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1em 0;
+    line-height: 1.2;
+}
+
+.card button {
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    padding: 0.7em 3.5em;
+    border-radius: 30px;
+    margin-bottom: 1em;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) { /* MAIN - CARD TABLET */
+
+    section {
+        justify-content: space-between;
+    }
+
+    .card {
+        font-size: 0.7em;
+        width: 48%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    section:first-of-type {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 30%;
+    }
+
+    .card:last-of-type {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    h1 {
+        font-size: 3em;
+    }
+
+    section:first-of-type {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 22%;
+    }
+}
+
+/* MAIN - ARTICLE SECTION */
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+article {
+    border-radius: 35px;
+    padding: 1.5em;
+    line-height: 1.2;
+}
+
+h4 {
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+article img {
+    width: 100%;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) { /* MAIN - ARTICLE TABLET */
+    p {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    h2 {
+        font-size: 2.8em;
+    }
+}
