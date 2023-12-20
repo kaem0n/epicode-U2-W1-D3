@@ -47,6 +47,10 @@ nav li, button {
     body {
         display: flex;
     }
+
+    main {
+        padding: 2em;
+    }
 }
 
 /* HEADER */
@@ -211,7 +215,7 @@ h1 {
 
     section:first-of-type {
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .card {
@@ -235,7 +239,7 @@ h1 {
     
     section:first-of-type {
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     
     .card {
